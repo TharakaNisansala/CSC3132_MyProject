@@ -1,5 +1,5 @@
 <?php
-    require_once 'connection/connection.php';
+    //require_once 'connection/connection.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yummy Union Recipe Sharing System</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
@@ -40,17 +40,17 @@
             <h2>Popular Recipes</h2>
             <div class="allrecipe">
                 <div class="list_of_recipe">
-                    <img src="recipe1.jpg" alt="Avocado Salad">
+                    <img src="images/recipe1.jpg" alt="Avocado Salad">
                     <h3>Avocado Salad</h3>
                     <p>Light meal avocado salad which is light and fresh.</p>
                 </div>
                 <div class="list_of_recipe">
-                    <img src="recipe2.jpg" alt="Grilled Chicken">
+                    <img src="images/recipe2.jpg" alt="Grilled Chicken">
                     <h3>Grilled Chicken</h3>
                     <p>A perfectly grilled chicken recipe to have with a balanced diet.</p>
                 </div>
                 <div class="list_of_recipe">
-                    <img src="recipe3.jpg" alt="Vegetarian Pasta">
+                    <img src="images/recipe3.jpg" alt="Vegetarian Pasta">
                     <h3>Vegetarian Pasta</h3>
                     <p>Delightful vegetarian pasta with vegetable mix.</p>
                 </div>

@@ -1,5 +1,5 @@
 <?php
-    require_once 'connection/connection.php';
+    //require_once 'connection/connection.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discover Recipes - Yummy Union</title>
-    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="css/styles1.css">
 </head>
 <body>
     <header>
@@ -42,23 +42,23 @@
             </div>
             <div class="allrecipe">
                 <div class="list_of_recipe">
-                    <img src="recipe1.jpg" alt="Avocado Salad">
+                    <img src="images/recipe1.jpg" alt="Avocado Salad">
                     <h3>Avocado Salad</h3>
                     <p>Light meal avocado salad fresh and healthy.</p>
                 </div>
                 <div class="list_of_recipe">
-                    <img src="recipe2.jpg" alt="Grilled Chicken">
+                    <img src="images/recipe2.jpg" alt="Grilled Chicken">
                     <h3>Grilled Chicken</h3>
                     <p>A healthy home-cooked way to enjoy Dairy Queen 
                         at its finest with a simple ground beef meal.</p>
                 </div>
                 <div class="list_of_recipe">
-                    <img src="recipe3.jpg" alt="Avocado Salad">
+                    <img src="images/recipe3.jpg" alt="Avocado Salad">
                     <h3>Vegetarian Pasta</h3>
                     <p>Pasta mixed with mixed veggies and is delicious veg, particularly.</p>
                 </div>
                 <div class="list_of_recipe">
-                    <img src="bkry/apple.jpg" alt="Avocado Salad">
+                    <img src="images/apple.jpg" alt="Avocado Salad">
                     <h3>Apple Pie</h3>
                     <p> </p>
                 </div>

@@ -1,5 +1,5 @@
 <?php
-    require_once 'connection/connection.php';
+    //require_once 'connection/connection.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Yummy Union</title>
-    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="css/styles1.css">
 </head>
 <body>
     <header>
