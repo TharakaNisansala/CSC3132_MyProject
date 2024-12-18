@@ -1,3 +1,6 @@
+<?php
+    require_once 'connection/connection.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,9 +17,9 @@
                 any of the activity happens with saved searches.</p>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="submit.html">Submit Recipe</a></li>
-                    <li><a href="browse.html">Browse Recipes</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="submit.php">Submit Recipe</a></li>
+                    <li><a href="browse.php">Browse Recipes</a></li>
                     <li><a href="login.php">Login</a></li>
                     <li><a href="register.php">Register</a></li>
                 </ul>
