@@ -7,8 +7,8 @@
             $mail = mysqli_real_escape_string($connection,$_POST['mail']);
             $user = mysqli_real_escape_string($connection,$_POST['user']);
 
-            $sql = "INSERT INTO users () VALUES()";
-            $result = mysqli_query();
+            $sql = "INSERT INTO users (uname,mail,pswd) VALUES('{$user}','{$mail}','{$_POST['pswd']}')";
+            $result = mysqli_query($connection,$sql);
 
             if(isset($result)){
                 header("Location: login.php");
