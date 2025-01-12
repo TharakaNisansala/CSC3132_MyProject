@@ -17,38 +17,7 @@
 </head>
 <body>
     <!-- Header Section -->
-    <header>
-        <div class="slideshow">
-            <div class="slide fade">
-                <img src="../IMAGES/almon.jpg" alt="almon">
-            </div>
-            <div class="slide fade">
-                <img src="../IMAGES/Almond-Butter.jpg" alt="Almond-Butter">
-            </div>
-            <div class="slide fade">
-                <img src="../IMAGES/apple.jpg" alt="apple">
-            </div>
-        </div>
-        <div class="overlay">
-            <img src="../IMAGES/logo.webp" alt="Yummy Union Logo" class="logo">
-            <h1>Yummy Union</h1>
-            <button type="button" class="login-button">
-            <a href="login.php"><img src="../IMAGES/user.png" alt="User Icon" class="user-icon">Login</a>
-            </button>
-
-
-            <p>Explore and Share Healthy Recipes</p>
-            <nav>
-                <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="submit.php">Submit Recipe</a></li>
-                    <li><a href="browse.php">Browse Recipes</a></li>
-                    <li><a href="about.php">About Us</a></li>
-                    <li><a href="contact.php">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <?php require_once 'nav.php'; ?>
 
     <!-- Main Section -->
     <section class="main">

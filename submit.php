@@ -1,6 +1,33 @@
 <?php
-    //require_once 'connection/connection.php';
+    require_once 'connection/connection.php';
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $rname = mysqli_real_escape_string($connection, $_POST['rname']);
+        $ing = mysqli_real_escape_string($connection,$_POST['ingredients']);
+        $category = mysqli_real_escape_string($connection, $_POST['category']);
+        $instruction = mysqli_real_escape_string($connection, $_POST['instructions']);
+
+        if (isset($_FILES['image-upload']) && $_FILES['image-upload']['error'] === 0) {
+            $imageName = basename($_FILES['image-upload']['name']);
+            $imagePath = "../IMAGES/" . $imageName;
+
+            if (move_uploaded_file($_FILES['image-upload']['tmp_name'], $imagePath)) {
+                $sql = "INSERT INTO recepies (rname,ingredients,instruction,category,recepieimg) VALUES ('$rname','{$ing}','{$instruction}', '$category', '$imageName')";
+
+                if (mysqli_query($connection, $sql)) {
+                    echo "<p>Recipe added successfully!</p>";
+                } else {
+                    echo "<p>Error: " . mysqli_error($connection) . "</p>";
+                }
+            } else {
+                echo "<p>Failed to upload image. Please try again.</p>";
+            }
+        } else {
+            echo "<p>Please upload a valid image.</p>";
+        }
+    }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,40 +38,14 @@
 </head>
 <body>
     <!-- Header Section -->
-    <header>
-        <div class="slideshow">
-            <div class="slide fade">
-                <img src="../IMAGES/almon.jpg" alt="almon" class="fade">
-            </div>
-            <div class="slide fade">
-                <img src="../IMAGES/Almond-Butter.jpg" alt="Almond-Butter" class="fade">
-            </div>
-            <div class="slide fade">
-                <img src="../IMAGES/apple.jpg" alt="apple" class="fade">
-            </div>
-        </div>
-        <div class="overlay">
-            <img src="../IMAGES/logo.webp" alt="Yummy Union Logo" class="logo">
-            <h1>Submit Your Recipe</h1>
-            <p>Explore and Share Healthy Recipes</p>
-            <nav>
-                <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li class="submit"><a href="submit.php">Submit Recipe</a></li>
-                    <li><a href="browse.php">Browse Recipes</a></li>
-                    <li><a href="about.php">About Us</a></li>
-                    <li><a href="contact.php">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <?php require_once 'nav.php'; ?>
 
     <section class="main">
         <div class="cont">
             <h2>Share Your Recipe with the Community</h2>
-            <form class="recipe_submision">
+            <form class="recipe_submision" action="submit.php" method="post" enctype="multipart/form-data">
                 <label for="recipe_name">Please enter the recipe name:</label>
-                <input type="text" id="recipe_name" name="recipe_name" required>
+                <input type="text" id="recipe_name" name="rname" required>
 
                 <label for="ingredients">Please enter the ingredients for the recipe:</label>
                 <textarea class="not_resize" id="ingredients" name="ingredients" rows="4" required></textarea>
