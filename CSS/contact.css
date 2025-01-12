@@ -1,0 +1,228 @@
+/* Reset and Body Styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #fdfdfd;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header with Slideshow */
+header {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slideshow .slide {
+    display: none;
+}
+
+.slideshow img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Darker overlay for better contrast */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow for text */
+}
+
+.overlay h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.overlay nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.overlay nav ul li.contact a {
+    color:#b2beb5;
+}
+
+.overlay nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: 2px solid white;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.overlay nav ul li a:hover {
+    background: white;
+    color: black;
+}
+
+.overlay nav ul li.about_us a {
+    color:#b2beb5;
+}
+
+.logo {
+    max-width: 120px;
+    margin-bottom: 1rem;
+    animation: fadeIn 1.2s ease-in-out;
+    border-radius: 50%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Contact Form Styling */
+.main {
+    background-color: #fff;
+    padding: 40px;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.cont {
+    width: 90%;
+    max-width: 850px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #0934f0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* Form Labels */
+label {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Input, Textarea, and Select Styling */
+input[type="text"], textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus, textarea:focus, select:focus {
+    border-color: #0976f1;
+}
+
+/* Button Styling */
+button[type="submit"] {
+    background-color: #0d54ee;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 14px 22px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    font-weight: 600;
+}
+
+button[type="submit"]:hover {
+    background-color: #f81707;
+    transform: translateY(-3px);
+}
+
+address {
+    text-align: center;
+    
+    font-size: 1.2rem;
+    font-style: normal;
+    line-height: 1.5;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+address p {
+    margin: 5px 0;
+    color: #333;
+}
+
+address a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+address a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Footer */
+footer {
+    background: #0078d4;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: yellow;
+}
+
+/* Email, Phone, and Address Styling */
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-info label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.contact-info input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9f9f9;
+}

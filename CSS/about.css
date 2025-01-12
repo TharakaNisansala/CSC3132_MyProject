@@ -1,0 +1,318 @@
+/* Reset and Body Styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #fdfdfd;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header with Slideshow */
+header {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slideshow .slide {
+    display: none;
+}
+
+.slideshow img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Darker overlay for better contrast */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow for text */
+}
+
+.overlay h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.overlay nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.overlay nav ul li.submit a {
+    color:#b2beb5;
+}
+
+.overlay nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: 2px solid white;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.overlay nav ul li a:hover {
+    background: white;
+    color: black;
+}
+.overlay nav ul li.about_us a {
+    color:#b2beb5;
+}
+
+
+.logo {
+    max-width: 120px;
+    margin-bottom: 1rem;
+    animation: fadeIn 1.2s ease-in-out;
+    border-radius: 50%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+/* General Form Styling */
+.main {
+    background-color: #fff;
+    padding: 40px;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.cont {
+    width: 90%;
+    max-width: 850px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #0934f0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* Form Labels */
+label {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Input, Textarea, and Select Styling */
+input[type="text"], textarea, select, input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus, textarea:focus, select:focus, input[type="file"]:focus {
+    border-color: #0976f1;
+    background-color: #f1f1f1;
+    outline: none;
+}
+
+/* Hover Effects for Inputs */
+input[type="text"]:hover, textarea:hover, select:hover, input[type="file"]:hover {
+    border-color: #0976f1;
+    background-color: #fdfdfd;
+}
+
+/* Textarea Specific */
+textarea.not_resize {
+    resize: none;
+}
+
+/* Button Styling */
+button {
+    background-color: #0d54ee;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 14px 22px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #f81707;
+    transform: translateY(-3px);
+}
+
+/* Select Box Styling */
+select {
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    transition: border-color 0.3s ease;
+}
+
+/* File Input */
+input[type="file"] {
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .cont {
+        width: 100%;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    input[type="text"], textarea, select, input[type="file"], button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+
+/* Added Styling for File Input Text */
+input[type="file"]::file-selector-button {
+    background-color: #0d54ee;
+    color: white;
+    border-radius: 8px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #f81707;
+}
+
+/* Focus Effect for Select Box */
+select:focus {
+    border-color: #0976f1;
+    background-color: #f1f1f1;
+}
+
+/* Input/Field Container */
+input[type="text"], select, input[type="file"], textarea {
+    box-sizing: border-box;
+}
+
+/* Add subtle animation when the page loads */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.main {
+    animation: fadeIn 1s ease-out;
+}
+/* About Page CSS */
+
+/* Team Styling */
+.team {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    margin: 2em 0;
+}
+
+.team-member {
+    text-align: center;
+    width: 150px;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.team-member h4 {
+    margin: 1em 0 0.5em;
+}
+
+.team-member p {
+    font-style: italic;
+}
+
+/* Testimonials Styling */
+.testimonials {
+    margin-top: 2em;
+    background-color: #f9f9f9;
+    padding: 2em;
+    border-radius: 8px;
+}
+
+.testimonials blockquote {
+    font-style: italic;
+    border-left: 4px solid #0078d4;
+    padding-left: 1em;
+    margin-bottom: 1.5em;
+}
+
+.testimonials blockquote strong {
+    display: block;
+    margin-top: 0.5em;
+    font-weight: normal;
+    text-align: right;
+}
+
+
+/* Footer */
+footer {
+    background: #0078d4;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: yellow;
+}

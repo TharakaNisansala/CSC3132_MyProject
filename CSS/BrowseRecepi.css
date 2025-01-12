@@ -1,0 +1,260 @@
+/* Reset and Body Styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #fdfdfd;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header with Slideshow */
+header {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slideshow .slide {
+    display: none;
+}
+
+.slideshow img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Darker overlay for better contrast */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow for text */
+}
+
+.overlay h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.overlay nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.overlay nav ul li.Browse_Recipes a {
+    color: #999;
+}
+.overlay nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: 2px solid white;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.overlay nav ul li a:hover {
+    background: white;
+    color: black;
+}
+
+.logo {
+    max-width: 120px;
+    margin-bottom: 1rem;
+    animation: fadeIn 1.2s ease-in-out;
+    border-radius: 50%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*Body*/
+/* General Styling */
+.main {
+    background-color: #fff;
+    padding: 40px;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.cont {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #0934f0;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* Search Section Styling */
+.search_sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.search_sec input[type="text"] {
+    width: 40%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.search_sec input[type="text"]:focus {
+    border-color: #0976f1;
+    outline: none;
+}
+
+.search_sec select {
+    width: 25%;
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.search_sec select:focus {
+    border-color: #0976f1;
+    outline: none;
+}
+
+.search_sec button {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    background-color: #0d54ee;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.search_sec button:hover {
+    background-color: #f81707;
+    transform: translateY(-3px);
+}
+
+/* Recipe List Styling */
+.allrecipe {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.list_of_recipe {
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    background-color: #fff;
+}
+
+.list_of_recipe img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+}
+
+.list_of_recipe h3 {
+    font-size: 1.3rem;
+    margin: 15px;
+    color: #0934f0;
+    font-weight: 600;
+}
+
+.list_of_recipe p {
+    font-size: 1rem;
+    margin: 0 15px 15px;
+    color: #555;
+}
+
+/* Hover Effects for Recipe Cards */
+.list_of_recipe:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.list_of_recipe:hover h3 {
+    color: #0d54ee;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .search_sec {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search_sec input[type="text"], .search_sec select, .search_sec button {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .allrecipe {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .list_of_recipe img {
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .allrecipe {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* Footer */
+footer {
+    background: #0078d4;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: yellow;
+}
