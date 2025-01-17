@@ -13,7 +13,6 @@
      <!-- Header Section -->
      <?php require_once 'nav.php'; ?>
 
-
     <section class="main">
         <div class="cont">
             <h2>Find Your Favorite Recipe</h2>
@@ -38,7 +37,9 @@
                         if (mysqli_num_rows($result) > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
                                 echo "<div class='list_of_recipe'>";
-                                echo "<img src='../IMAGES/" . htmlspecialchars($row['recepieimg']) . "' alt='" . htmlspecialchars($row['rname']) . "'>";
+                                // Ensure the image path is correct
+                                $imagePath = '../IMAGES/' . htmlspecialchars($row['recepieimg']);
+                                echo "<img src='$imagePath' alt='" . htmlspecialchars($row['rname']) . "'>";
                                 echo "<h3>" . htmlspecialchars($row['rname']) . "</h3>";
                                 echo "<p>" . htmlspecialchars($row['instruction']) . "</p>";
                                 echo "</div>";

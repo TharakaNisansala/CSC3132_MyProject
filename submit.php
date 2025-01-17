@@ -3,16 +3,22 @@
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $rname = mysqli_real_escape_string($connection, $_POST['rname']);
-        $ing = mysqli_real_escape_string($connection,$_POST['ingredients']);
+        $ing = mysqli_real_escape_string($connection, $_POST['ingredients']);
         $category = mysqli_real_escape_string($connection, $_POST['category']);
         $instruction = mysqli_real_escape_string($connection, $_POST['instructions']);
 
         if (isset($_FILES['image-upload']) && $_FILES['image-upload']['error'] === 0) {
-            $imageName = basename($_FILES['image-upload']['name']);
+            $imageName = uniqid('recipe_', true) . '.' . pathinfo($_FILES['image-upload']['name'], PATHINFO_EXTENSION); // Generate a unique image name
             $imagePath = "../IMAGES/" . $imageName;
 
+            // Ensure the directory exists
+            if (!is_dir('../IMAGES')) {
+                mkdir('../IMAGES', 0755, true);  // Create the directory if it doesn't exist
+            }
+
             if (move_uploaded_file($_FILES['image-upload']['tmp_name'], $imagePath)) {
-                $sql = "INSERT INTO recepies (rname,ingredients,instruction,category,recepieimg) VALUES ('$rname','{$ing}','{$instruction}', '$category', '$imageName')";
+                $sql = "INSERT INTO recepies (rname, ingredients, instruction, category, recepieimg) 
+                        VALUES ('$rname', '$ing', '$instruction', '$category', '$imageName')";
 
                 if (mysqli_query($connection, $sql)) {
                     echo "<p>Recipe added successfully!</p>";

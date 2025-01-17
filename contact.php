@@ -27,7 +27,7 @@
                 <ul>
                     <li><a href="index.php">Home</a></li>
                     <li><a href="submit.php">Submit Recipe</a></li>
-                    <li><a href="browseReceipe.php">Browse Recipes</a></li>
+                    <li><a href="browse.php">Browse Recipes</a></li>
                     <li><a href="about.php">About Us</a></li>
                     <li class="contact"><a href="contact.php">Contact</a></li>
                 </ul>
